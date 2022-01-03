@@ -1,0 +1,20 @@
+2016-07-12 23:37:40,731   ibmiotf.application.Client  CRITICAL Not authorized: (A:c2xa3i:MBot2, a-c2xa3i-pntloyplrv, Password)
+2016-07-12 23:37:50,488   ibmiotf.application.Client  CRITICAL Operation timed out connecting to the IBM Internet of Things service: c2xa3i.messaging.internetofthings.ibmcloud.com
+2016-07-12 23:39:34,399   ibmiotf.application.Client  INFO    Connected successfully: A:c2xa3i:MBot2
+2016-07-15 13:19:42,363   ibmiotf.application.Client  INFO    Connected successfully: A:c2xa3i:MBot2
+2016-07-15 13:23:43,850   ibmiotf.application.Client  ERROR   Unexpected disconnect from the IBM Internet of Things Foundation
+2016-07-15 13:23:43,853   ibmiotf.application.Client  INFO    Messages published : 11, life: 242s, rate: 1/22.02s
+2016-07-15 13:23:43,854   ibmiotf.application.Client  INFO    Messages received  : 0, life: 242s, rate: 1/0.00s
+2016-07-15 13:23:43,856   ibmiotf.application.Client  ERROR   Unexpected disconnect from the IBM Internet of Things Foundation
+2016-07-15 13:23:43,858   ibmiotf.application.Client  INFO    Messages published : 11, life: 242s, rate: 1/22.02s
+2016-07-15 13:23:43,859   ibmiotf.application.Client  INFO    Messages received  : 0, life: 242s, rate: 1/0.00s
+2016-07-15 13:23:45,636   ibmiotf.application.Client  INFO    Connected successfully: A:c2xa3i:MBot2
+2016-07-21 13:31:16,529   ibmiotf.application.Client  INFO    Connected successfully: A:c2xa3i:MBot2
+2016-07-21 13:37:04,003   ibmiotf.application.Client  INFO    Connected successfully: A:c2xa3i:MBot2
+2016-07-21 13:43:12,690   ibmiotf.application.Client  INFO    Connected successfully: A:c2xa3i:MBot2
+2016-09-23 14:07:20,467   ibmiotf.application.Client  INFO    Connected successfully: A:c2xa3i:MBot2
+2016-09-23 14:10:32,948   ibmiotf.application.Client  INFO    Connected successfully: A:c2xa3i:MBot2
+2016-09-23 14:16:51,086   ibmiotf.application.Client  INFO    Connected successfully: A:c2xa3i:MBot2
+2016-09-23 14:22:10,035   ibmiotf.application.Client  INFO    Connected successfully: A:c2xa3i:MBot2
+2016-09-23 14:29:32,981   ibmiotf.application.Client  INFO    Connected successfully: A:c2xa3i:MBot2
+2016-09-27 12:50:36,773   ibmiotf.application.Client  INFO    Connected successfully: A:c2xa3i:MBot2

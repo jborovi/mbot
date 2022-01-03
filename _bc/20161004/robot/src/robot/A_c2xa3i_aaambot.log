@@ -1,0 +1,6 @@
+2016-07-12 16:00:00,574   ibmiotf.application.Client  CRITICAL Not authorized: (A:c2xa3i:aaaMBot, a-c2xa3i-gbnliaj0kb, Password)
+2016-07-12 16:00:10,411   ibmiotf.application.Client  CRITICAL Operation timed out connecting to the IBM Internet of Things service: c2xa3i.messaging.internetofthings.ibmcloud.com
+2016-07-12 17:48:02,568   ibmiotf.application.Client  CRITICAL Not authorized: (A:c2xa3i:aaaMBot, a-c2xa3i-gbnliaj0kb, Pass9876)
+2016-07-12 17:48:12,329   ibmiotf.application.Client  CRITICAL Operation timed out connecting to the IBM Internet of Things service: c2xa3i.messaging.internetofthings.ibmcloud.com
+2016-07-12 17:51:05,965   ibmiotf.application.Client  CRITICAL Not authorized: (A:c2xa3i:aaaMBot, a-c2xa3i-gbnliaj0kb, Pass9876)
+2016-07-12 17:51:15,802   ibmiotf.application.Client  CRITICAL Operation timed out connecting to the IBM Internet of Things service: c2xa3i.messaging.internetofthings.ibmcloud.com

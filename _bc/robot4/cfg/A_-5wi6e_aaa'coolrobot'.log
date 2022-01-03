@@ -1,0 +1,1 @@
+2016-05-15 20:47:59,141   ibmiotf.application.Client  CRITICAL Failed to connect to the IBM Internet of Things service: -5wi6e.messaging.internetofthings.ibmcloud.com - [Errno -2] Name or service not known

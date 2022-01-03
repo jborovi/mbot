@@ -1,0 +1,10 @@
+[application]
+org=c2xa3i
+type=RaspberryPi
+id=MBot
+auth-method=token
+auth-token=Password
+#auth-key=MBot
+auth-token=Zg5jJIrv3iZ39TVZ!(
+auth-key=a-a-c2xa3i-pntloyplrv
+

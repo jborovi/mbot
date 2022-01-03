@@ -1,0 +1,22 @@
+2016-06-23 12:09:33,936   ibmiotf.application.Client  CRITICAL Failed to connect to the IBM Internet of Things service: 5wi6e0.messaging.internetofthings.ibmcloud.com - [Errno 22] Invalid argument
+2016-06-29 16:40:17,692   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-01 14:48:02,764   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-01 14:51:01,963   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-01 15:01:36,391   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-01 15:01:59,304   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 14:14:16,548   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 14:14:53,298   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 14:22:00,174   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 14:32:41,470   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 14:33:12,078   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 14:36:06,849   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 14:36:22,566   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 14:36:57,451   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 14:37:01,437   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 14:45:26,252   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 14:45:47,380   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 14:46:31,849   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 14:46:51,924   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 14:52:01,482   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 14:52:49,536   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 15:43:32,782   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot

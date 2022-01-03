@@ -1,0 +1,8 @@
+[application]
+org=5wi6e0
+type=Raspberry
+id=coolrobot
+auth-method=token
+auth-token=*fYFyzXSQI3R8mhNbU
+auth-key=a-5wi6e0-bstshlqpnh
+

@@ -1,0 +1,93 @@
+'''
+Created on Jun 9, 2016
+
+@author: user
+'''
+from robot.api.controll.EventsManager import EventsManager
+from datetime import datetime
+try:
+    import RPi.GPIO as GPIO
+except Exception, e:
+    print 'MBOT:'+str(datetime.now()) +'GPIO Not imported'
+import time
+from robot.api.common.common import Common
+
+class GPIO_controll(object):
+    '''
+    Class controlling the big blue button (is it pressed or not...)
+    '''
+
+
+    debugFalseOn = False
+    
+    debugFalseOnStarted = None
+    
+    timeDebug = None
+
+    def __init__(self, pin):
+        try:
+            GPIO.setmode(GPIO.BCM)
+            self.pin = pin
+            
+            GPIO.setup(pin,GPIO.IN, pull_up_down=GPIO.PUD_UP)
+            self.GPIO_ON = True
+        except Exception, e:
+            self.GPIO_ON = False
+#         
+    def checkBtn(self):
+        '''
+        just for debugging
+        '''
+#         return GPIO.input(self.pin)
+        while True:
+# 	    GPIO.output(self.pin,False)
+  
+            if (GPIO.input(self.pin)):
+                Common.tty_print("Button not Pressed")
+            else:
+                Common.tty_print("Button pressed")
+            time.sleep(1)
+             
+            
+    def is_on(self):
+        '''
+        Returns the state of the button
+        '''
+        if self.GPIO_ON:
+            if not GPIO.input(self.pin):
+                EventsManager.button_is_pressed.set()
+            else:
+                EventsManager.button_is_pressed.clear()
+#         print EventsManager.button_is_pressed.isSet()
+            return not GPIO.input(self.pin)
+        else:
+            return False
+
+    def __check_debug_on(self):
+        import time
+#         print self.debugFalseOnStarted
+        
+        if self.debugFalseOn:
+#             print time.time() - self.debugFalseOnStarted
+            if (time.time() - self.debugFalseOnStarted) > self.timeDebug:
+                self.debugFalseOn=False
+    
+#     def set
+
+    def setDebugFalseOnFor(self, debugForSec):
+        self.debugFalseOnStarted= time.time()
+        self.timeDebug = debugForSec
+        self.debugFalseOn = True
+        
+        
+    
+    def change_status(self, value):
+	       pass
+#        GPIO.output(self.pin,value)
+        
+if __name__ == '__main__':
+#2 tlacitko
+#10 dioda
+    btn = GPIO_controll(10)
+    btn.checkBtn()
+        

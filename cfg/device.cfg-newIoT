@@ -1,0 +1,8 @@
+[application]
+org=c2xa3i
+type=MBotRaspberry2
+id=MBot
+auth-method=token
+auth-token=Password
+auth-key=a-c2xa3i-gbnliaj0kb
+

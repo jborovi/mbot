@@ -1,0 +1,3 @@
+#!/bin/sh
+#exec /path/to/service/script /path/to/your/node 2>&1
+exec nice -n -5 ionice -c 1 -n 0 /home/mbot/mbotProject/src/robot/main.sh 2>&1

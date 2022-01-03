@@ -1,0 +1,14 @@
+2016-06-23 12:09:33,936   ibmiotf.application.Client  CRITICAL Failed to connect to the IBM Internet of Things service: 5wi6e0.messaging.internetofthings.ibmcloud.com - [Errno 22] Invalid argument
+2016-06-29 16:40:17,692   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 16:04:13,971   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 16:06:11,798   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 16:07:55,136   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 16:13:42,974   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 16:17:49,408   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 16:19:35,847   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 16:24:49,551   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 16:25:19,320   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 16:26:42,395   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 16:30:48,973   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 16:33:00,841   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot
+2016-07-04 16:34:18,318   ibmiotf.application.Client  INFO    Connected successfully: A:5wi6e0:aaacoolrobot

@@ -1,0 +1,142 @@
+import sys
+
+sys.path.append('/home/honza/robot/src')
+
+from robot.api import Constants
+import time
+from speech_recognition import UnknownValueError
+from robot.api.hw.adruinoConnect import AdruionConnect
+
+SENSOR_ON = False
+    
+IOT_ON = True
+
+EMOTION_OUTPUT_ON = False
+
+
+if __name__ == '__main__':
+    from robot.api.net.NetCom import NetCom
+    from robot.api.sound.SoundMgr import SoundMgr
+    from robot.api.hw.RangeSensor import RangeSensor
+    from robot.api.iot.iotClient import IOTClient 
+    netcom = NetCom()
+    soundMgr = SoundMgr()
+    
+    
+    if EMOTION_OUTPUT_ON:
+        adruino = AdruionConnect('/dev/ttyACM0', 9600)
+    
+    if SENSOR_ON:
+        rangeSensor = RangeSensor()
+    
+    if IOT_ON:
+        iotClient = IOTClient()
+        
+        iotClient.connect('/home/honza/robot/cfg/device.cfg')
+        
+        iotClient.send_json_msg({'status':'robot connected'})
+    
+    isMovement = False
+    
+    conversationTime = 0
+    conversationStarted = 0
+    
+    
+    tellAjoke = False
+    
+    repeatSpeech = False
+    
+    didNotUnderstandCount = 0
+    
+    greetingsCount = 0
+    
+    greetings = [Constants.WAW_GREETING, Constants.JOKE1, Constants.JOKE2]
+    
+    
+    while True:
+e()
+        if EMOTION_OUTPUT_ON:
+            try:
+                adruino.write_emotion('sleep')
+                
+            except Exception,e:
+                print 'Exception in set emotion adruino'
+
+        try:
+            if SENSOR_ON:
+                isMovement = rangeSensor.getMovement()
+                if isMovement:
+                    if EMOTION_OUTPUT_ON:
+                        try:
+                            adruino.write_emotion('joy')
+                            
+                        except Exception,e:
+                            print 'Exception in set emotion adruino'
+                    
+                    if IOT_ON:
+                        iotClient.send_json_msg({'status':'motion detected'})
+            else:
+                isMovement = True
+        except Exception,e:
+            print 'Exception in rangeSensor'
+            print e
+        if isMovement:
+            try:
+                conversationStarted = time.time()
+                if IOT_ON:
+                    iotClient.send_json_msg({'status':'start conversation'})
+                    
+                if greetingsCount > len(greetings):
+                    greetingsCount = 0
+                    
+                netcom.text_to_speech(greetings[greetingsCount], Constants.WAW_PATH)    
+                soundMgr.play_wav(Constants.WAW_PATH)
+                recognized_sound  = netcom.recognize()
+                netcom.analyzed_emotion = netcom.analyze(recognized_sound)
+                if IOT_ON:
+                    iotClient.send_json_msg({'status':'emotion detected'})
+                    iotClient.send_json_msg({'emotion':netcom.analyzed_emotion})
+                    
+                
+                if repeatSpeech == False:
+                    if EMOTION_OUTPUT_ON:
+                        try:
+                            adruino.write_emotion(netcom.analyzed_emotion)                        
+                        except Exception,e:
+                            print 'Exception in set emotion adruino'
+                        
+                    netcom.set_reply_wav(netcom.analyzed_emotion)                
+                    netcom.text_to_speech(netcom.emotion_wav, Constants.WAW_PATH)    
+                    soundMgr.play_wav(Constants.WAW_PATH)
+                else:
+                    netcom.text_to_speech(Constants.MSG_WILL_TELL_YOU, Constants.WAW_PATH)    
+                    soundMgr.play_wav(Constants.WAW_PATH)
+                    
+                    netcom.text_to_speech(recognized_sound, Constants.WAW_PATH)    
+                    soundMgr.play_wav(Constants.WAW_PATH)
+                
+            except UnknownValueError, uve:
+                didNotUnderstandCount += 1
+                print 'Sensor did not understand, or nobody spoke'
+                
+                if EMOTION_OUTPUT_ON:
+                    try:
+                        adruino.write_emotion('fear')
+                    except Exception,e:
+                        print 'Exception in set emotion adruino'
+                    
+                netcom.text_to_speech(Constants.MSG_DONT_UNDERSTAND, Constants.WAW_PATH)    
+                soundMgr.play_wav(Constants.WAW_PATH)
+            except Exception, e:
+		print e
+                didNotUnderstandCount += 1
+                print 'Exception in speech'
+                
+            greetingsCount += 1
+                
+            if didNotUnderstandCount > 3:
+                didNotUnderstandCount = 0
+                isMovement = False
+                
+            
+

@@ -1,0 +1,5 @@
+2016-05-15 20:48:26,232   ibmiotf.application.Client  CRITICAL Connection failed: RC= 2
+2016-05-15 20:48:36,075   ibmiotf.application.Client  CRITICAL Operation timed out connecting to the IBM Internet of Things service: 5wi6e0.messaging.internetofthings.ibmcloud.com
+2016-05-15 20:48:57,867   ibmiotf.application.Client  CRITICAL Connection failed: RC= 2
+2016-05-15 20:49:33,714   ibmiotf.application.Client  CRITICAL Connection failed: RC= 2
+2016-05-15 20:49:43,558   ibmiotf.application.Client  CRITICAL Operation timed out connecting to the IBM Internet of Things service: 5wi6e0.messaging.internetofthings.ibmcloud.com
